@@ -43,7 +43,6 @@ architecture arq of DifferentialEquation is
       MR : in std_logic_vector(7 downto 0);
 		s : out std_logic_vector(15 DOWNTO 0));
 	end component;
-	
 
 	begin
 		
@@ -54,16 +53,6 @@ architecture arq of DifferentialEquation is
 		u_signal <= registrador2;
 		y_signal <= registrador3;
 		saida <= registrador3;
-		
-	--			while (x < a) do
-	--				x1 = x + dx;
-	--				u1 = u - (3*x*u*dx)-(3*y*dx);
-	--				y1 = y + u * dx;
-	--				x = x1;
-	--				u = u1;
-	--				y = y1;
-	--				end
-	--			return y;
 
 			somador1: somador_n generic map (N => 16) -- Tamnho dos bits
 									  port map (A => x_signal,
@@ -91,7 +80,7 @@ architecture arq of DifferentialEquation is
 						if rising_edge(clock) then
 							registrador3 <= part3;
 							registrador1 <= saida_somador1;
-							registrador2 <= saida_multiplicador5;
+							registrador2 <= part2;
 						end if;
 						if falling_edge(clock) then
 							
