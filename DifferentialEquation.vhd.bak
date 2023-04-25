@@ -1,0 +1,67 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity DifferentialEquation is
+port (x, u, y, dx, a: in std_logic_vector (15 DOWNTO 0);
+		x1, u1, y1: in std_logic_vector (15 DOWNTO 0);
+		saida: out std_logic_vector (15 DOWNTO 0));
+end DifferentialEquation;
+
+architecture arq of DifferentialEquation is
+
+	signal x_signal, u_signal: std_logic_vector(15 downto 0);
+	signal saida_somador1: std_logic_vector(15 downto 0);
+
+	component somador_n is
+		generic (N : integer := 16);
+		port(
+			A, B : in std_logic_vector(N-1 downto 0);
+			S : out std_logic_vector(N-1 downto 0);
+			Co : in std_logic;
+			Cout : out std_logic	
+	);
+	end component;
+	
+
+	begin
+	
+			while (x < a) do
+				x1 = x + dx;
+				u1 = u - (3*x*u*dx)-(3*y*dx);
+				y1 = y + u * dx;
+				x = x1;
+				u = u1;
+				y = y1;
+				end
+			return y;
+
+		
+		somador1: somador_n generic map (N => 16) -- Tamnho dos bits
+                          port map (A => x,
+                                    B => dx,
+                                    S => saida_somador1,
+                                    Co => '0',
+                                    Cout => cout_somador1);
+												
+		somador2_n12: somador_n generic map (N => 12) -- Tamnho dos bits
+                          port map (A => s_gpp3(11 DOWNTO 0),
+                                    B => s_somador1(13 DOWNTO 2),
+                                    S => s_somador2,
+                                    Co => '0',
+                                    Cout => cout_somador2);
+												
+		somador3_n10: somador_n generic map (N => 10) -- Tamnho dos bits
+                          port map (A => s_gpp4(9 DOWNTO 0),
+                                    B => s_somador2(11 DOWNTO 2),
+                                    S => s_somador3,
+                                    Co => '0',
+                                    Cout => cout_somador3);
+											
+		P: process(x, u, y,  dx, a)
+			begin
+
+			  
+			  
+		  end process;
+
+end arq;
