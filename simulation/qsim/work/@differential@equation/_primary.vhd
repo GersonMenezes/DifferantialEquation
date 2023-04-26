@@ -7,6 +7,7 @@ entity DifferentialEquation is
         y               : in     vl_logic_vector(15 downto 0);
         dx              : in     vl_logic_vector(15 downto 0);
         a               : in     vl_logic_vector(15 downto 0);
+        start           : in     vl_logic;
         clock           : in     vl_logic;
         testx           : out    vl_logic_vector(15 downto 0);
         testu           : out    vl_logic_vector(15 downto 0);

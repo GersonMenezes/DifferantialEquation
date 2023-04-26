@@ -34,6 +34,7 @@ begin
 		when "101" => temp <= cp1 + 1;
 		when "110" => temp <= cp1 + 1;
 		when "111" => temp <= "000000000";
+		when others => temp <= "000000000";
 
 	  end case;
 end process;

@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/25/2023 14:01:02"
+// Generated on "04/25/2023 19:22:21"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    DifferentialEquation
 // 
@@ -30,6 +30,7 @@ module DifferentialEquation_vlg_sample_tst(
 	a,
 	clock,
 	dx,
+	start,
 	u,
 	x,
 	y,
@@ -38,6 +39,7 @@ module DifferentialEquation_vlg_sample_tst(
 input [15:0] a;
 input  clock;
 input [15:0] dx;
+input  start;
 input [15:0] u;
 input [15:0] x;
 input [15:0] y;
@@ -45,7 +47,7 @@ output sampler_tx;
 
 reg sample;
 time current_time;
-always @(a or clock or dx or u or x or y)
+always @(a or clock or dx or start or u or x or y)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -1322,6 +1324,7 @@ module DifferentialEquation_vlg_vec_tst();
 reg [15:0] a;
 reg clock;
 reg [15:0] dx;
+reg start;
 reg [15:0] u;
 reg [15:0] x;
 reg [15:0] y;
@@ -1340,6 +1343,7 @@ DifferentialEquation i1 (
 	.clock(clock),
 	.dx(dx),
 	.saida(saida),
+	.start(start),
 	.testu(testu),
 	.testx(testx),
 	.testy(testy),
@@ -1760,6 +1764,7 @@ DifferentialEquation_vlg_sample_tst tb_sample (
 	.a(a),
 	.clock(clock),
 	.dx(dx),
+	.start(start),
 	.u(u),
 	.x(x),
 	.y(y),

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DifferentialEquation
-Tue Apr 25 14:00:38 2023
+Tue Apr 25 19:20:08 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -35,16 +35,15 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  27. Parameter Settings for User Entity Instance: Multiplicador_Matricial:multiplicador6|somador_n:somador2_n12
  28. Parameter Settings for User Entity Instance: Multiplicador_Matricial:multiplicador6|somador_n:somador3_n10
  29. Port Connectivity Checks: "Multiplicador_Matricial:multiplicador4"
- 30. Port Connectivity Checks: "Multiplicador_Matricial:multiplicador3"
- 31. Port Connectivity Checks: "Multiplicador_Matricial:multiplicador2"
- 32. Port Connectivity Checks: "Multiplicador_Matricial:multiplicador1|somador_n:somador3_n10"
- 33. Port Connectivity Checks: "Multiplicador_Matricial:multiplicador1|somador_n:somador2_n12"
- 34. Port Connectivity Checks: "Multiplicador_Matricial:multiplicador1|somador_n:somador1_n14"
- 35. Port Connectivity Checks: "Multiplicador_Matricial:multiplicador1|gpp:gpp1"
- 36. Port Connectivity Checks: "Multiplicador_Matricial:multiplicador1"
- 37. Port Connectivity Checks: "somador_n:somador1"
- 38. Elapsed Time Per Partition
- 39. Analysis & Synthesis Messages
+ 30. Port Connectivity Checks: "Multiplicador_Matricial:multiplicador2"
+ 31. Port Connectivity Checks: "Multiplicador_Matricial:multiplicador1|somador_n:somador3_n10"
+ 32. Port Connectivity Checks: "Multiplicador_Matricial:multiplicador1|somador_n:somador2_n12"
+ 33. Port Connectivity Checks: "Multiplicador_Matricial:multiplicador1|somador_n:somador1_n14"
+ 34. Port Connectivity Checks: "Multiplicador_Matricial:multiplicador1|gpp:gpp1"
+ 35. Port Connectivity Checks: "Multiplicador_Matricial:multiplicador1"
+ 36. Port Connectivity Checks: "somador_n:somador1"
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
 
 
 
@@ -70,16 +69,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 25 14:00:38 2023           ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 25 19:20:08 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DifferentialEquation                            ;
 ; Top-level Entity Name              ; DifferentialEquation                            ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 412                                             ;
-;     Total combinational functions  ; 412                                             ;
+; Total logic elements               ; 720                                             ;
+;     Total combinational functions  ; 720                                             ;
 ;     Dedicated logic registers      ; 48                                              ;
 ; Total registers                    ; 48                                              ;
-; Total pins                         ; 145                                             ;
+; Total pins                         ; 146                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -196,34 +195,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 412          ;
-;                                             ;              ;
-; Total combinational functions               ; 412          ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 225          ;
-;     -- 3 input functions                    ; 109          ;
-;     -- <=2 input functions                  ; 78           ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 352          ;
-;     -- arithmetic mode                      ; 60           ;
-;                                             ;              ;
-; Total registers                             ; 48           ;
-;     -- Dedicated logic registers            ; 48           ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 145          ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-; Maximum fan-out node                        ; LessThan0~30 ;
-; Maximum fan-out                             ; 48           ;
-; Total fan-out                               ; 1586         ;
-; Average fan-out                             ; 2.62         ;
-+---------------------------------------------+--------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 720   ;
+;                                             ;       ;
+; Total combinational functions               ; 720   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 390   ;
+;     -- 3 input functions                    ; 192   ;
+;     -- <=2 input functions                  ; 138   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 593   ;
+;     -- arithmetic mode                      ; 127   ;
+;                                             ;       ;
+; Total registers                             ; 48    ;
+;     -- Dedicated logic registers            ; 48    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 146   ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; dx[1] ;
+; Maximum fan-out                             ; 57    ;
+; Total fan-out                               ; 2708  ;
+; Average fan-out                             ; 2.96  ;
++---------------------------------------------+-------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -231,7 +230,78 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                 ; Library Name ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
-; |DifferentialEquation                       ; 412 (33)          ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 145  ; 0            ; |DifferentialEquation                                                                               ; work         ;
+; |DifferentialEquation                       ; 720 (65)          ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 146  ; 0            ; |DifferentialEquation                                                                               ; work         ;
+;    |Multiplicador_Matricial:multiplicador1| ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1                                        ; work         ;
+;       |gpp:gpp1|                            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1|gpp:gpp1                               ; work         ;
+;       |gpp:gpp2|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1|gpp:gpp2                               ; work         ;
+;       |gpp:gpp3|                            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1|gpp:gpp3                               ; work         ;
+;       |gpp:gpp4|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1|gpp:gpp4                               ; work         ;
+;       |somador_n:somador1_n14|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1|somador_n:somador1_n14                 ; work         ;
+;          |FA:\g1:0:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1|somador_n:somador1_n14|FA:\g1:0:soman  ; work         ;
+;          |FA:\g1:1:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1|somador_n:somador1_n14|FA:\g1:1:soman  ; work         ;
+;          |FA:\g1:2:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1|somador_n:somador1_n14|FA:\g1:2:soman  ; work         ;
+;       |somador_n:somador2_n12|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1|somador_n:somador2_n12                 ; work         ;
+;          |FA:\g1:0:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1|somador_n:somador2_n12|FA:\g1:0:soman  ; work         ;
+;          |FA:\g1:1:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1|somador_n:somador2_n12|FA:\g1:1:soman  ; work         ;
+;          |FA:\g1:2:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1|somador_n:somador2_n12|FA:\g1:2:soman  ; work         ;
+;       |somador_n:somador3_n10|              ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1|somador_n:somador3_n10                 ; work         ;
+;          |FA:\g1:1:soman|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador1|somador_n:somador3_n10|FA:\g1:1:soman  ; work         ;
+;    |Multiplicador_Matricial:multiplicador2| ; 97 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2                                        ; work         ;
+;       |gpp:gpp1|                            ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|gpp:gpp1                               ; work         ;
+;       |gpp:gpp2|                            ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|gpp:gpp2                               ; work         ;
+;       |gpp:gpp3|                            ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|gpp:gpp3                               ; work         ;
+;       |gpp:gpp4|                            ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|gpp:gpp4                               ; work         ;
+;       |somador_n:somador1_n14|              ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|somador_n:somador1_n14                 ; work         ;
+;          |FA:\g1:0:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|somador_n:somador1_n14|FA:\g1:0:soman  ; work         ;
+;          |FA:\g1:1:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|somador_n:somador1_n14|FA:\g1:1:soman  ; work         ;
+;          |FA:\g1:2:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|somador_n:somador1_n14|FA:\g1:2:soman  ; work         ;
+;          |FA:\g1:3:soman|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|somador_n:somador1_n14|FA:\g1:3:soman  ; work         ;
+;          |FA:\g1:4:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|somador_n:somador1_n14|FA:\g1:4:soman  ; work         ;
+;       |somador_n:somador2_n12|              ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|somador_n:somador2_n12                 ; work         ;
+;          |FA:\g1:0:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|somador_n:somador2_n12|FA:\g1:0:soman  ; work         ;
+;          |FA:\g1:1:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|somador_n:somador2_n12|FA:\g1:1:soman  ; work         ;
+;          |FA:\g1:2:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|somador_n:somador2_n12|FA:\g1:2:soman  ; work         ;
+;       |somador_n:somador3_n10|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|somador_n:somador3_n10                 ; work         ;
+;          |FA:\g1:0:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|somador_n:somador3_n10|FA:\g1:0:soman  ; work         ;
+;          |FA:\g1:1:soman|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|somador_n:somador3_n10|FA:\g1:1:soman  ; work         ;
+;    |Multiplicador_Matricial:multiplicador3| ; 169 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3                                        ; work         ;
+;       |gpp:gpp1|                            ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|gpp:gpp1                               ; work         ;
+;       |gpp:gpp2|                            ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|gpp:gpp2                               ; work         ;
+;       |gpp:gpp3|                            ; 31 (31)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|gpp:gpp3                               ; work         ;
+;       |gpp:gpp4|                            ; 39 (39)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|gpp:gpp4                               ; work         ;
+;       |somador_n:somador1_n14|              ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador1_n14                 ; work         ;
+;          |FA:\g1:0:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador1_n14|FA:\g1:0:soman  ; work         ;
+;          |FA:\g1:10:soman|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador1_n14|FA:\g1:10:soman ; work         ;
+;          |FA:\g1:12:soman|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador1_n14|FA:\g1:12:soman ; work         ;
+;          |FA:\g1:1:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador1_n14|FA:\g1:1:soman  ; work         ;
+;          |FA:\g1:2:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador1_n14|FA:\g1:2:soman  ; work         ;
+;          |FA:\g1:3:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador1_n14|FA:\g1:3:soman  ; work         ;
+;          |FA:\g1:4:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador1_n14|FA:\g1:4:soman  ; work         ;
+;          |FA:\g1:5:soman|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador1_n14|FA:\g1:5:soman  ; work         ;
+;          |FA:\g1:6:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador1_n14|FA:\g1:6:soman  ; work         ;
+;          |FA:\g1:7:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador1_n14|FA:\g1:7:soman  ; work         ;
+;       |somador_n:somador2_n12|              ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador2_n12                 ; work         ;
+;          |FA:\g1:0:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador2_n12|FA:\g1:0:soman  ; work         ;
+;          |FA:\g1:1:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador2_n12|FA:\g1:1:soman  ; work         ;
+;          |FA:\g1:2:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador2_n12|FA:\g1:2:soman  ; work         ;
+;          |FA:\g1:3:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador2_n12|FA:\g1:3:soman  ; work         ;
+;          |FA:\g1:4:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador2_n12|FA:\g1:4:soman  ; work         ;
+;          |FA:\g1:5:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador2_n12|FA:\g1:5:soman  ; work         ;
+;          |FA:\g1:6:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador2_n12|FA:\g1:6:soman  ; work         ;
+;          |FA:\g1:7:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador2_n12|FA:\g1:7:soman  ; work         ;
+;          |FA:\g1:8:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador2_n12|FA:\g1:8:soman  ; work         ;
+;          |FA:\g1:9:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador2_n12|FA:\g1:9:soman  ; work         ;
+;       |somador_n:somador3_n10|              ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador3_n10                 ; work         ;
+;          |FA:\g1:0:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador3_n10|FA:\g1:0:soman  ; work         ;
+;          |FA:\g1:1:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador3_n10|FA:\g1:1:soman  ; work         ;
+;          |FA:\g1:2:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador3_n10|FA:\g1:2:soman  ; work         ;
+;          |FA:\g1:3:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador3_n10|FA:\g1:3:soman  ; work         ;
+;          |FA:\g1:4:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador3_n10|FA:\g1:4:soman  ; work         ;
+;          |FA:\g1:5:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador3_n10|FA:\g1:5:soman  ; work         ;
+;          |FA:\g1:6:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador3_n10|FA:\g1:6:soman  ; work         ;
+;          |FA:\g1:7:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador3_n10|FA:\g1:7:soman  ; work         ;
+;          |FA:\g1:8:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador3_n10|FA:\g1:8:soman  ; work         ;
+;          |FA:\g1:9:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|somador_n:somador3_n10|FA:\g1:9:soman  ; work         ;
 ;    |Multiplicador_Matricial:multiplicador4| ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador4                                        ; work         ;
 ;       |gpp:gpp1|                            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador4|gpp:gpp1                               ; work         ;
 ;       |gpp:gpp2|                            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador4|gpp:gpp2                               ; work         ;
@@ -248,16 +318,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |somador_n:somador3_n10|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador4|somador_n:somador3_n10                 ; work         ;
 ;          |FA:\g1:0:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador4|somador_n:somador3_n10|FA:\g1:0:soman  ; work         ;
 ;          |FA:\g1:1:soman|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador4|somador_n:somador3_n10|FA:\g1:1:soman  ; work         ;
-;    |Multiplicador_Matricial:multiplicador5| ; 174 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5                                        ; work         ;
-;       |gpp:gpp1|                            ; 37 (37)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp1                               ; work         ;
-;       |gpp:gpp2|                            ; 28 (28)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp2                               ; work         ;
-;       |gpp:gpp3|                            ; 27 (27)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp3                               ; work         ;
-;       |gpp:gpp4|                            ; 28 (28)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp4                               ; work         ;
-;       |somador_n:somador1_n14|              ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|somador_n:somador1_n14                 ; work         ;
+;    |Multiplicador_Matricial:multiplicador5| ; 165 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5                                        ; work         ;
+;       |gpp:gpp1|                            ; 35 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp1                               ; work         ;
+;       |gpp:gpp2|                            ; 27 (27)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp2                               ; work         ;
+;       |gpp:gpp3|                            ; 26 (26)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp3                               ; work         ;
+;       |gpp:gpp4|                            ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp4                               ; work         ;
+;       |somador_n:somador1_n14|              ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|somador_n:somador1_n14                 ; work         ;
 ;          |FA:\g1:0:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|somador_n:somador1_n14|FA:\g1:0:soman  ; work         ;
 ;          |FA:\g1:1:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|somador_n:somador1_n14|FA:\g1:1:soman  ; work         ;
 ;          |FA:\g1:2:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|somador_n:somador1_n14|FA:\g1:2:soman  ; work         ;
-;          |FA:\g1:3:soman|                   ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|somador_n:somador1_n14|FA:\g1:3:soman  ; work         ;
+;          |FA:\g1:3:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|somador_n:somador1_n14|FA:\g1:3:soman  ; work         ;
 ;          |FA:\g1:4:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|somador_n:somador1_n14|FA:\g1:4:soman  ; work         ;
 ;          |FA:\g1:5:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|somador_n:somador1_n14|FA:\g1:5:soman  ; work         ;
 ;          |FA:\g1:6:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|somador_n:somador1_n14|FA:\g1:6:soman  ; work         ;
@@ -285,10 +355,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |FA:\g1:7:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|somador_n:somador3_n10|FA:\g1:7:soman  ; work         ;
 ;          |FA:\g1:8:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|somador_n:somador3_n10|FA:\g1:8:soman  ; work         ;
 ;          |FA:\g1:9:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|somador_n:somador3_n10|FA:\g1:9:soman  ; work         ;
-;    |Multiplicador_Matricial:multiplicador6| ; 159 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6                                        ; work         ;
+;    |Multiplicador_Matricial:multiplicador6| ; 161 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6                                        ; work         ;
 ;       |gpp:gpp1|                            ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|gpp:gpp1                               ; work         ;
 ;       |gpp:gpp2|                            ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|gpp:gpp2                               ; work         ;
-;       |gpp:gpp3|                            ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|gpp:gpp3                               ; work         ;
+;       |gpp:gpp3|                            ; 26 (26)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|gpp:gpp3                               ; work         ;
 ;       |gpp:gpp4|                            ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|gpp:gpp4                               ; work         ;
 ;       |somador_n:somador1_n14|              ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|somador_n:somador1_n14                 ; work         ;
 ;          |FA:\g1:0:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|somador_n:somador1_n14|FA:\g1:0:soman  ; work         ;
@@ -323,7 +393,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |FA:\g1:7:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|somador_n:somador3_n10|FA:\g1:7:soman  ; work         ;
 ;          |FA:\g1:8:soman|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|somador_n:somador3_n10|FA:\g1:8:soman  ; work         ;
 ;          |FA:\g1:9:soman|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|somador_n:somador3_n10|FA:\g1:9:soman  ; work         ;
-;    |somador_n:somador1|                     ; 29 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|somador_n:somador1                                                            ; work         ;
+;    |somador_n:somador1|                     ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|somador_n:somador1                                                            ; work         ;
+;       |FA:\g1:0:soman|                      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|somador_n:somador1|FA:\g1:0:soman                                             ; work         ;
 ;       |FA:\g1:10:soman|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|somador_n:somador1|FA:\g1:10:soman                                            ; work         ;
 ;       |FA:\g1:11:soman|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|somador_n:somador1|FA:\g1:11:soman                                            ; work         ;
 ;       |FA:\g1:12:soman|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DifferentialEquation|somador_n:somador1|FA:\g1:12:soman                                            ; work         ;
@@ -350,10 +421,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Total registers                              ; 48    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 48    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 47    ;
+; Number of registers using Clock Enable       ; 48    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -363,19 +434,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|gpp:gpp1|Mux1 ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp1|Mux6 ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp2|Mux8 ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp3|Mux8 ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|gpp:gpp3|Mux7 ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp4|Mux0 ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp2|Mux0 ;
-; 6:1                ; 14 bits   ; 56 LEs        ; 42 LEs               ; 14 LEs                 ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp2|Mux1 ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp3|Mux0 ;
-; 6:1                ; 12 bits   ; 48 LEs        ; 36 LEs               ; 12 LEs                 ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp3|Mux1 ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|gpp:gpp4|Mux8 ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp4|Mux1 ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp4|Mux2 ;
+; 3:1                ; 48 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |DifferentialEquation|registradorx[0]                                      ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|gpp:gpp1|Mux2 ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|gpp:gpp1|Mux0 ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|gpp:gpp1|Mux8 ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp1|Mux4 ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|gpp:gpp2|Mux8 ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp3|Mux8 ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|gpp:gpp3|Mux7 ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|gpp:gpp4|Mux0 ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|gpp:gpp2|Mux3 ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|gpp:gpp2|Mux0 ;
+; 6:1                ; 21 bits   ; 84 LEs        ; 63 LEs               ; 21 LEs                 ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp2|Mux7 ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador5|gpp:gpp3|Mux0 ;
+; 6:1                ; 18 bits   ; 72 LEs        ; 54 LEs               ; 18 LEs                 ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|gpp:gpp3|Mux2 ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador6|gpp:gpp4|Mux8 ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|gpp:gpp4|Mux1 ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador2|gpp:gpp3|Mux5 ;
+; 8:1                ; 18 bits   ; 90 LEs        ; 54 LEs               ; 36 LEs                 ; No         ; |DifferentialEquation|Multiplicador_Matricial:multiplicador3|gpp:gpp4|Mux4 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 
 
@@ -580,15 +656,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Multiplicador_Matricial:multiplicador3"                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; s    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +--------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Multiplicador_Matricial:multiplicador2"                                                 ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -663,7 +730,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -673,7 +740,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Apr 25 14:00:35 2023
+    Info: Processing started: Tue Apr 25 19:20:03 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DifferentialEquation -c DifferentialEquation
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file multiplicador_matricial.vhd
@@ -692,9 +759,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file differe
     Info (12022): Found design unit 1: DifferentialEquation-arq
     Info (12023): Found entity 1: DifferentialEquation
 Info (12127): Elaborating entity "DifferentialEquation" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at DifferentialEquation.vhd(25): object "part2" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at DifferentialEquation.vhd(29): object "cout_somador1" assigned a value but never read
-Warning (10492): VHDL Process Statement warning at DifferentialEquation.vhd(89): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10036): Verilog HDL or VHDL warning at DifferentialEquation.vhd(30): object "cout_somador1" assigned a value but never read
 Info (12128): Elaborating entity "somador_n" for hierarchy "somador_n:somador1"
 Info (12128): Elaborating entity "FA" for hierarchy "somador_n:somador1|FA:\g1:0:soman"
 Info (12128): Elaborating entity "Multiplicador_Matricial" for hierarchy "Multiplicador_Matricial:multiplicador1"
@@ -707,63 +772,14 @@ Info (12128): Elaborating entity "somador_n" for hierarchy "Multiplicador_Matric
 Info (12128): Elaborating entity "somador_n" for hierarchy "Multiplicador_Matricial:multiplicador1|somador_n:somador3_n10"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 48 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "x[0]"
-    Warning (15610): No output dependent on input pin "x[1]"
-    Warning (15610): No output dependent on input pin "x[2]"
-    Warning (15610): No output dependent on input pin "x[3]"
-    Warning (15610): No output dependent on input pin "x[4]"
-    Warning (15610): No output dependent on input pin "x[5]"
-    Warning (15610): No output dependent on input pin "x[6]"
-    Warning (15610): No output dependent on input pin "x[7]"
-    Warning (15610): No output dependent on input pin "x[8]"
-    Warning (15610): No output dependent on input pin "x[9]"
-    Warning (15610): No output dependent on input pin "x[10]"
-    Warning (15610): No output dependent on input pin "x[11]"
-    Warning (15610): No output dependent on input pin "x[12]"
-    Warning (15610): No output dependent on input pin "x[13]"
-    Warning (15610): No output dependent on input pin "x[14]"
-    Warning (15610): No output dependent on input pin "x[15]"
-    Warning (15610): No output dependent on input pin "u[0]"
-    Warning (15610): No output dependent on input pin "u[1]"
-    Warning (15610): No output dependent on input pin "u[2]"
-    Warning (15610): No output dependent on input pin "u[3]"
-    Warning (15610): No output dependent on input pin "u[4]"
-    Warning (15610): No output dependent on input pin "u[5]"
-    Warning (15610): No output dependent on input pin "u[6]"
-    Warning (15610): No output dependent on input pin "u[7]"
-    Warning (15610): No output dependent on input pin "u[8]"
-    Warning (15610): No output dependent on input pin "u[9]"
-    Warning (15610): No output dependent on input pin "u[10]"
-    Warning (15610): No output dependent on input pin "u[11]"
-    Warning (15610): No output dependent on input pin "u[12]"
-    Warning (15610): No output dependent on input pin "u[13]"
-    Warning (15610): No output dependent on input pin "u[14]"
-    Warning (15610): No output dependent on input pin "u[15]"
-    Warning (15610): No output dependent on input pin "y[0]"
-    Warning (15610): No output dependent on input pin "y[1]"
-    Warning (15610): No output dependent on input pin "y[2]"
-    Warning (15610): No output dependent on input pin "y[3]"
-    Warning (15610): No output dependent on input pin "y[4]"
-    Warning (15610): No output dependent on input pin "y[5]"
-    Warning (15610): No output dependent on input pin "y[6]"
-    Warning (15610): No output dependent on input pin "y[7]"
-    Warning (15610): No output dependent on input pin "y[8]"
-    Warning (15610): No output dependent on input pin "y[9]"
-    Warning (15610): No output dependent on input pin "y[10]"
-    Warning (15610): No output dependent on input pin "y[11]"
-    Warning (15610): No output dependent on input pin "y[12]"
-    Warning (15610): No output dependent on input pin "y[13]"
-    Warning (15610): No output dependent on input pin "y[14]"
-    Warning (15610): No output dependent on input pin "y[15]"
-Info (21057): Implemented 557 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 81 input pins
+Info (21057): Implemented 866 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 82 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 412 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 56 warnings
+    Info (21061): Implemented 720 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4650 megabytes
-    Info: Processing ended: Tue Apr 25 14:00:38 2023
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Tue Apr 25 19:20:08 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
 
 

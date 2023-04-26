@@ -4,6 +4,7 @@ use ieee.std_logic_unsigned.all;
 
 entity DifferentialEquation is
 port (x, u, y, dx, a: in std_logic_vector (15 DOWNTO 0);
+		start: in std_logic;
 		clock : in std_logic;
 		testx, testu, testy: out std_logic_vector (15 DOWNTO 0);
 		saida: out std_logic_vector (15 DOWNTO 0));
@@ -23,9 +24,9 @@ architecture arq of DifferentialEquation is
 	signal saida_multiplicador5: std_logic_vector(15 downto 0);
 	signal saida_multiplicador6: std_logic_vector(15 downto 0);
 	signal part1, part2, part3: std_logic_vector(15 downto 0);
-	signal registrador1: std_logic_vector(15 downto 0) := x;
-	signal registrador2: std_logic_vector(15 downto 0) := u;
-	signal registrador3: std_logic_vector(15 downto 0) := y;
+	signal registradorx: std_logic_vector(15 downto 0);
+	signal registradoru: std_logic_vector(15 downto 0);
+	signal registradory: std_logic_vector(15 downto 0);
 	signal cout_somador1 : std_logic;
 	
 	component somador_n is
@@ -46,13 +47,13 @@ architecture arq of DifferentialEquation is
 
 	begin
 		
-		testx <= registrador1;
-		testu <= registrador2;
-		testy <= registrador3;
-		x_signal <= registrador1;
-		u_signal <= registrador2;
-		y_signal <= registrador3;
-		saida <= registrador3;
+		testx <= registradorx;
+		testu <= registradoru;
+		testy <= registradory;
+		x_signal <= registradorx;
+		u_signal <= registradoru;
+		y_signal <= registradory;
+		saida <= registradory;
 
 			somador1: somador_n generic map (N => 16) -- Tamnho dos bits
 									  port map (A => x_signal,
@@ -72,21 +73,24 @@ architecture arq of DifferentialEquation is
 			multiplicador6: Multiplicador_Matricial port map(u_signal(7 downto 0), dx(7 downto 0), saida_multiplicador6);
 			part3 <= y_signal + saida_multiplicador6;
 
-			
-			P: process(clock, x_signal, y_signal, u_signal)
-				begin
-					if(x_signal<a) then
+			  
+			processinho: process(clock, x_signal, y_signal, u_signal)
+			begin
+				if rising_edge(clock) then
+					if start = '1' then
 						
-						if rising_edge(clock) then
-							registrador3 <= part3;
-							registrador1 <= saida_somador1;
-							registrador2 <= part2;
-						end if;
-						if falling_edge(clock) then
-							
-						end if;
+						registradorx <= x;
+						registradoru <= u;
+						registradory <= y;
+					
+					elsif (x_signal < a) then
+						
+						registradorx <= saida_somador1 ;
+						registradoru <= part2 ;
+						registradory <= part3;
+						
 					end if;
-				  
-			  end process;
+				end if;
+			end process;
 
 end arq;

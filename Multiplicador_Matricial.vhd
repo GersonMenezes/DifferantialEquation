@@ -22,6 +22,8 @@ architecture arq of Multiplicador_Matricial is
 	signal cin_somador2: std_logic;
 	signal cin_somador3: std_logic;
 
+	signal gpp1_temp: std_logic_vector(2 downto 0);
+
 	component somador_n is
 		generic (N : integer := 16);
 		port(
@@ -44,7 +46,8 @@ architecture arq of Multiplicador_Matricial is
 	
 		s <= s_somador3 & s_somador2(1 downto 0) & s_somador1(1 downto 0) & s_gpp1(1 downto 0);
 		
-		gpp1: gpp port map(MD, (MR(1 downto 0))&'0', s_gpp1(8 downto 0));
+		gpp1_temp <= (MR(1 downto 0))&'0';
+		gpp1: gpp port map(MD, gpp1_temp, s_gpp1(8 downto 0));
 		gpp2: gpp port map(MD, MR(3 downto 1), s_gpp2(8 downto 0));
 		gpp3: gpp port map(MD, MR(5 downto 3), s_gpp3(8 downto 0));
 		gpp4: gpp port map(MD, MR(7 downto 5), s_gpp4(8 downto 0));
@@ -76,21 +79,25 @@ architecture arq of Multiplicador_Matricial is
 			  case s_gpp1(8) is
 				when '0' => s_gpp1(15 downto 9) <= "0000000";
 				when '1' => s_gpp1(15 downto 9) <= ("1111111");
+				when others => s_gpp1(15 downto 9) <= "0000000";
 			  end case;
 			  
 			  case s_gpp2(8) is
 				when '0' => s_gpp2(13 downto 9) <= ("00000"); 
 				when '1' => s_gpp2(13 downto 9) <= ("11111");
+				when others => s_gpp2(13 downto 9) <= ("00000");
 			  end case;
 			  
 			  case s_gpp3(8) is
 				when '0' => s_gpp3(11 DOWNTO 9) <= ("000");
 				when '1' => s_gpp3(11 DOWNTO 9) <= ("111");
+				when others => s_gpp3(11 DOWNTO 9) <= ("000");
 			  end case;
 			  
 			  case s_gpp4(8) is
 				when '0' => s_gpp4(9) <= '0';
 				when '1' => s_gpp4(9) <= '1';
+				when others => s_gpp4(9) <= '0';
 			  end case;
 			  
 		  end process;
